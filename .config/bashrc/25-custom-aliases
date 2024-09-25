@@ -1,0 +1,3 @@
+alias ssha='eval $(ssh-agent -s); ssh-add ~/.ssh/artemisKey'
+alias push_dirname='git add .; git commit -m $(basename $(pwd)); git push'
+alias push='git add .; git commit -m "init"; git push'

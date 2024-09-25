@@ -1,0 +1,29 @@
+alias ls='eza -a --icons'
+alias ll='eza -al --icons'
+
+#custom-aliases
+alias timesync="sudo timedatectl set-ntp true"
+
+# copy to clipboard
+alias toclip="wl-copy"
+
+#file operations
+alias rm='rm -I'
+alias mv='mv -i'
+alias cp='cp -i'
+alias df='df -h'
+alias size='du -hs'
+alias tree='find . -print | sed -e '\''s;[^/]*/;|____;g;s;____|; |;g'\'''
+
+# music
+alias mp3dl='youtube-dl -x --audio-format mp3 --metadata-from-title "%(artist)s - %(title)s" -o "%(title)s.%(ext)s"'
+
+#reload zsh conf
+alias reload='source ~/.zshrc'
+
+#spwan ssh agent
+alias ssha='eval "$(ssh-agent -s)"'
+
+#other
+alias timel='timedatectl set-ntp 1'
+alias audio='pavucontrol'
