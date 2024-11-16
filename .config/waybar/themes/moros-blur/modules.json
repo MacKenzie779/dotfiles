@@ -212,7 +212,7 @@
     // Clock
     "clock": {
         "format": "{:%Od.%Om.%Y - %H:%M}",
-        "on-click": "ags -t calendar",
+        "on-click": "ags toggle calendar",
         "tooltip": false
     },
 

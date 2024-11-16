@@ -33,7 +33,7 @@
 
     // Modules Left
     "modules-left": [
-        "custom/appmenu",
+"custom/appmenu",
         "custom/settings",
         "custom/waybarthemes",
         "custom/wallpaper",
@@ -52,7 +52,7 @@
     "modules-right": [
         "custom/updates",
         "pulseaudio",
-//"backlight",
+"backlight",
         "bluetooth",
         "battery", 
 "network",

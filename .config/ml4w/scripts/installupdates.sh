@@ -5,10 +5,6 @@
 #  | || | | \__ \ || (_| | | | | |_| | |_) | (_| | (_| | ||  __/\__ \ 
 # |___|_| |_|___/\__\__,_|_|_|  \___/| .__/ \__,_|\__,_|\__\___||___/ 
 #                                    |_|                              
-# by Stephan Raabe (2024) 
-# ----------------------------------------------------- 
-# Required: yay trizen timeshift btrfs-grub
-# ----------------------------------------------------- 
 
 sleep 1
 clear
@@ -42,6 +38,7 @@ else
 fi
 
 if [[ $(_isInstalledAUR "timeshift") == "0" ]] ;then
+    echo
     if gum confirm "DO YOU WANT TO CREATE A SNAPSHOT?" ;then
         echo
         c=$(gum input --placeholder "Enter a comment for the snapshot...")
@@ -51,10 +48,10 @@ if [[ $(_isInstalledAUR "timeshift") == "0" ]] ;then
         echo ":: DONE. Snapshot $c created!"
         echo
     elif [ $? -eq 130 ]; then
-        echo ":: Snapshot canceled."
+        echo ":: Snapshot skipped."
         exit 130
     else
-        echo ":: Snapshot canceled."
+        echo ":: Snapshot skipped."
     fi
     echo
 fi
