@@ -1,8 +1,22 @@
 import { App } from "astal/gtk3"
 import Apps from "gi://AstalApps"
 import Wp from "gi://AstalWp"
-import { Variable, GLib, bind, exec, execAsync } from "astal"
+import { Variable, GLib, bind } from "astal"
+import { subprocess, exec, execAsync } from "astal/process"
 import { Astal, Gtk, Gdk } from "astal/gtk3"
+import Brightness from "./Brightness"
+
+function BrightnessSlider() {
+    const brightness = Brightness.get_default()
+
+    return <box className="MicrophoneSlider" css="min-width: 140px">
+        <slider
+            hexpand
+            value={bind(brightness, "screen")}
+            onDragged={({ value }) => brightness.screen = value}
+        />
+    </box>
+}
 
 function AudioSlider() {
     const speaker = Wp.get_default()?.audio.defaultSpeaker!
@@ -44,17 +58,17 @@ function openhyprlandapp() {
 }
 
 function openwaypaper() {
-    execAsync("waypaper")
+    const proc = subprocess(["bash", "-c", "waypaper"])    
     App.get_window("sidebar")!.hide()
 }
 
 function openwallpapereffects() {
-    execAsync("./scripts/run_wallpapereffects.sh")
+    const proc = subprocess(["bash", "-c", "$HOME/.config/hypr/scripts/wallpaper-effects.sh"])    
     App.get_window("sidebar")!.hide()
 }
 
 function openwaybarthemes() {
-    execAsync("./scripts/run_themeswitcher.sh")
+    const proc = subprocess(["bash", "-c", "$HOME/.config/waybar/themeswitcher.sh"])    
     App.get_window("sidebar")!.hide()
 }
 
@@ -69,6 +83,11 @@ export default function Sidebar() {
     visible={false} 
     className="Sidebar"
     anchor={anchor}
+    keymode={Astal.Keymode.ON_DEMAND}
+    onKeyPressEvent={function (self, event: Gdk.Event) {
+        if (event.get_keyval()[1] === Gdk.KEY_Escape)
+            self.hide()
+    }}      
     >    
     <box className="sidebar" vertical>
         <box css="padding-bottom:20px;">
@@ -101,6 +120,11 @@ export default function Sidebar() {
             <AudioSlider/>
             <label css="padding-bottom:10px" label="Microphone"></label>
             <MicrophoneSlider />
+        </box>
+        <box css="padding-bottom:20px;"></box>
+        <box className="group" halign="left" vertical>
+            <label css="padding-bottom:10px" label="Brightness"></label>
+            <BrightnessSlider />
         </box>
     </box>
 </window>
