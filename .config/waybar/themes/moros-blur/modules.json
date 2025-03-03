@@ -186,11 +186,11 @@
             "transition-left-to-right": false
         },        
         "modules": [
-            "custom/exit",
-            "custom/hypridle"
+            "custom/notification",
+            "custom/hypridle",
+            "power-profiles-daemon"
         ]
     },
-
 
     // Keyboard State
     "keyboard-state": {
@@ -437,5 +437,17 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+    // Power Profiles Daemon
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     }
 }
