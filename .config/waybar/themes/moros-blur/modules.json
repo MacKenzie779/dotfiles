@@ -363,7 +363,7 @@
 
     // Bluetooth
     "bluetooth": {
-        "max-length": 10,
+        "max-length": 7,
         "format-connected": "󰂰  {device_alias}",
         "format-disabled": "󰂲",
         "format-off": "",
