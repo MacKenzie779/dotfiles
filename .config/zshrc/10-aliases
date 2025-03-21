@@ -18,6 +18,7 @@ alias v='$EDITOR'
 #alias ts='~/.config/ml4w/scripts/snapshot.sh'
 alias wifi='nmtui'
 alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
+alias update-mirrors="sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak && rate-mirrors arch --max-delay 7200 | sudo tee /etc/pacman.d/mirrorlist"
 
 # -----------------------------------------------------
 # ML4W Apps
