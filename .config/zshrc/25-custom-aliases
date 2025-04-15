@@ -27,3 +27,4 @@ alias ssha='eval "$(ssh-agent -s)"'
 #other
 alias timel='timedatectl set-ntp 1'
 alias audio='pavucontrol'
+alias paccache_clean='paccache -r'
