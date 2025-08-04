@@ -3,26 +3,8 @@
 # -----------------------------------------------------
 
 # -----------------------------------------------------
-# Pywal
-# -----------------------------------------------------
-cat ~/.cache/wal/sequences
-
-# -----------------------------------------------------
 # Fastfetch
 # -----------------------------------------------------
 if [[ $(tty) == *"pts"* ]]; then
     #fastfetch --config examples/13
-    # start ssh-agent if not already running
-    if [ -z "$SSH_AUTH_SOCK" ] ; then
-        eval "$(ssh-agent -s)" >/dev/null 2>&1
-    fi
-
-else
-    echo
-    if [ -f /bin/qtile ]; then
-        echo "Start Qtile X11 with command Qtile"
-    fi
-    if [ -f /bin/hyprctl ]; then
-        echo "Start Hyprland with command Hyprland"
-    fi
 fi
