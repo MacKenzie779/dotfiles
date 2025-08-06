@@ -29,7 +29,7 @@
  * ----------------------------------------------------- */
 
 * {
-    font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome,  Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Fira Sans Semibold", "Font Awesome 7 Free", "Font Awesome 7 Brands", "Font Awesome 6 Free", "Font Awesome 6 Brands", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     border: none;
     border-radius: 0px;
 }
@@ -180,6 +180,10 @@ window#waybar.empty #window {
     font-size: 20px;
     font-weight: bold;
     color: @iconcolor;
+}
+
+#custom-settings {
+    margin-right:16px;
 }
 
 #custom-hyprshade {
