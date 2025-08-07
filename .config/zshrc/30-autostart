@@ -6,5 +6,9 @@
 # Fastfetch
 # -----------------------------------------------------
 if [[ $(tty) == *"pts"* ]]; then
+    # start ssh-agent if not already running
+    if [ -z "$SSH_AUTH_SOCK" ] ; then
+        eval "$(ssh-agent -s)" >/dev/null 2>&1
+    fi
     #fastfetch --config examples/13
 fi
