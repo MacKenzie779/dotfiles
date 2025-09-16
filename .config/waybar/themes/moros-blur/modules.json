@@ -325,38 +325,49 @@
 
     // Battery
     "battery": {
+        "interval": 1,
         "states": {
-            "good": 95,
+            // "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
+        "format": "{icon} {capacity}%",
         "format-charging": "  {capacity}%",
         "format-plugged": "  {capacity}%",
         "format-alt": "{icon}  {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "],
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ],
         "on-click-right": "gnome-power-statistics"
     },
 
     // Pulseaudio
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "  {format_source}",
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", " ", " "]
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
     },
@@ -418,23 +429,18 @@
     },
 
     // SwayNC
-    // SwayNC
     "custom/notification": {
         "tooltip-format": "Left: Notifications\nRight: Do not disturb",
         "format": "{icon}",
         "format-icons": {
-            "notification":
-                "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
-            "none": "",
-            "dnd-notification":
-                "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
-            "dnd-none": "",
-            "inhibited-notification":
-                "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
-            "inhibited-none": "",
-            "dnd-inhibited-notification":
-                "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
-            "dnd-inhibited-none": ""
+            "notification": "notifications_active",
+            "none": "notifications",
+            "dnd-notification": "notifications_active",
+            "dnd-none": "notifications_paused",
+            "inhibited-notification": "notification_important",
+            "inhibited-none": "notification_important",
+            "dnd-inhibited-notification": "notification_off",
+            "dnd-inhibited-none": "notifications_off"
         },
         "return-type": "json",
         "exec-if": "which swaync-client",
