@@ -9,7 +9,7 @@ POSH=agnoster
 # ZSH_THEME=robbyrussell
 
 # -----------------------------------------------------
-# oh-myzsh plugins
+# oh-my-zsh plugins
 # -----------------------------------------------------
 plugins=(
     git
@@ -45,4 +45,4 @@ setopt appendhistory
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/EDM115-newline.omp.json)"
 
 # Shipped Theme
-#eval "$(oh-my-posh init zsh --config /usr/share/oh-my-posh/themes/agnoster.omp.json)"
+# eval "$(oh-my-posh init zsh --config /usr/share/oh-my-posh/themes/agnoster.omp.json)"
