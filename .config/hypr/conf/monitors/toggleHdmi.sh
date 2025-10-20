@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE="/home/user/dotfiles/.config/hypr/conf/monitors/default.conf"
+FILE="/home/user/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/monitors/default.conf"
 TARGET="7"
 
 # Check if the file exists
