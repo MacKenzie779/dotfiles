@@ -11,10 +11,6 @@
 {
     // General Settings
 
-    // Position TOP
-    "layer": "top",
-    "margin-bottom": 0,
-
     // Position BOTTOM
     // "position": "bottom",
     // "margin-top": 0,
@@ -27,8 +23,7 @@
 
     // Load Modules
     "include": [
-        "~/.config/ml4w/settings/waybar-quicklinks.json",
-        "~/.config/waybar/themes/moros-blur/modules.json"
+        "/home/user/.mydotfiles/com.ml4w.dotfiles.stable/.config/waybar/themes/moros-blur/modules.json"
     ],
 
     // Modules Left

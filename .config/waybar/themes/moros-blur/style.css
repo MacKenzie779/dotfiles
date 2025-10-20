@@ -491,7 +491,7 @@ label:focus {
 }
 
  #custom-nowplaying {
-    background-color: @background;
+    background-color: @backgroundlight;
     font-size: 11px;
     color: @on_surface;
     border-radius: 5px 5px 5px 5px;
@@ -507,5 +507,5 @@ label:focus {
 }
 
  #custom-nowplaying.paused {
-    background-color: @background;
+    background-color: @backgroundlight;
 }
