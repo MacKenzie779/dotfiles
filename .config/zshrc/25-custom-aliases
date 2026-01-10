@@ -31,3 +31,6 @@ alias ssha='eval "$(ssh-agent -s)"'
 alias timel='timedatectl set-ntp 1'
 alias audio='pavucontrol'
 alias paccache_clean='paccache -r'
+
+#my stuff
+alias update-mirrors="sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak && rate-mirrors arch --max-delay 7200 | sudo tee /etc/pacman.d/mirrorlist"

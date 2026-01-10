@@ -37,24 +37,24 @@ fi
 
 ### Conda lazy loading
 # --- fast conda: lazy-load on first use ---
-export PATH="/opt/anaconda/bin:$PATH"
-export CONDA_CHANGEPS1=false   # optional: avoid prompt fiddling unless you want it
+# export PATH="/opt/anaconda/bin:$PATH"
+# export CONDA_CHANGEPS1=false   # optional: avoid prompt fiddling unless you want it
 
-conda() {
-  # remove this wrapper after first call
-  unset -f conda
+# conda() {
+#   # remove this wrapper after first call
+#   unset -f conda
 
-  # load conda shell integration (needed for `conda activate`)
-  if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
-    source "/opt/anaconda/etc/profile.d/conda.sh"
-  else
-    echo "conda.sh not found: /opt/anaconda/etc/profile.d/conda.sh" >&2
-    return 1
-  fi
+#   # load conda shell integration (needed for `conda activate`)
+#   if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
+#     source "/opt/anaconda/etc/profile.d/conda.sh"
+#   else
+#     echo "conda.sh not found: /opt/anaconda/etc/profile.d/conda.sh" >&2
+#     return 1
+#   fi
 
-  # now re-run the original command with real conda functions available
-  conda "$@"
-}
+#   # now re-run the original command with real conda functions available
+#   conda "$@"
+# }
 # -----------------------------------------
 
 
