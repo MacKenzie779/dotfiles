@@ -10,7 +10,7 @@
  * General
  * ----------------------------------------------------- */
 
- * {
+* {
     font-family: "Fira Sans Semibold", "Font Awesome 7 Free", "Font Awesome 7 Brands", "Font Awesome 6 Free", "Font Awesome 6 Brands", FontAwesome, "Material Icons", Roboto, Helvetica, Arial, sans-serif;
     border: none;
     border-radius: 0px;
@@ -18,41 +18,33 @@
 
 window#waybar {
     background:transparent;
+    color: white;
 }
 
 .modules-left {
-    background-color: @surface;
     border-radius: 12px;
-    background: radial-gradient(circle at 50% 250%, alpha(darker(@surface),0.9), alpha(@surface_dim,0.9)) padding-box,
-        linear-gradient(@primary,@on_primary) border-box;
-    border: 1px solid transparent;	
+    border: 1px solid transparent;
     opacity:0.8;
     padding:0px;
     margin:10px;
-    box-shadow: inset 1px 2px 2px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 2px 2px 14px rgba(255, 255, 255, 0.6), inset 0 1px 2px 0px rgba(255, 255, 255, 0.6), inset 1px 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 .modules-right {
-    background-color: @surface;
     border-radius: 12px;
-    background: radial-gradient(circle at 50% 250%, alpha(darker(@surface),0.9), alpha(@surface_dim,0.9)) padding-box,
-        linear-gradient(@primary,@on_primary) border-box;
-    border: 1px solid transparent;	
+    border: 1px solid transparent;
     opacity:0.8;
     padding:0px;
     margin:10px;
-    box-shadow: inset 1px 2px 2px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 2px 14px 2px rgba(255, 255, 255, 0.6), inset 0 1px 2px 0px rgba(255, 255, 255, 0.6), inset 1px 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 .modules-center {
-    background-color: @surface;
     border-radius: 12px;
-    background: radial-gradient(circle at 50% 250%, alpha(darker(@surface),0.9), alpha(@surface_dim,0.9)) padding-box,
-        linear-gradient(@primary,@on_primary) border-box;
-    border: 1px solid transparent;	
+    border: 1px solid transparent;
     opacity:0.8;
     margin:10px;
-    box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 2px 2px 14px rgba(255, 255, 255, 0.6), inset 0 1px 2px 0px rgba(255, 255, 255, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 label.module {
@@ -63,51 +55,51 @@ label.module {
 }
 
 /*
-label.module {
-    font-size: 14px;
-    color: @on_surface;
-    padding:3px 10px;
-    transition: all 0.3s ease-out;    
-    background: radial-gradient(circle at 50% 250%, @on_tertiary_fixed_variant, @on_tertiary_fixed) padding-box,
-        linear-gradient(@on_primary_fixed_variant, @on_primary_fixed) border-box;
-    border-radius: 10px;
-    border: 0px solid transparent;	
-}
-
-label.module:hover {
-}
-*/
+ * label.module {
+ *    font-size: 14px;
+ *    color: @on_surface;
+ *    padding:3px 10px;
+ *    transition: all 0.3s ease-out;
+ *    background: radial-gradient(circle at 50% 250%, @on_tertiary_fixed_variant, @on_tertiary_fixed) padding-box,
+ *        linear-gradient(@on_primary_fixed_variant, @on_primary_fixed) border-box;
+ *    border-radius: 10px;
+ *    border: 0px solid transparent;
+ * }
+ *
+ * label.module:hover {
+ * }
+ */
 
 /* -----------------------------------------------------
  * Workspaces
  * ----------------------------------------------------- */
 
 #workspaces {
-    padding: 5px 3px 5px 3px;
-    min-width: 176px;
+padding: 5px 3px 5px 3px;
+min-width: 176px;
 }
 
 #workspaces button {
-    color: @on_surface;
-    border-radius: 3px;
-    padding:0px 5px 0px 5px;
-    margin:0px 2px 0px 2px;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid transparent;
+color: @on_surface;
+border-radius: 3px;
+padding:0px 5px 0px 5px;
+margin:0px 2px 0px 2px;
+transition: all 0.3s ease-in-out;
+border: 1px solid transparent;
 }
 
 #workspaces button.active {
-    background:alpha(@primary,0.2);
-    border: 1px solid transparent;
-    transition: all 0.3s ease-in-out;
-    min-width: 30px;
-    border-radius: 8px;
-    box-shadow: inset 1px 2px 2px rgba(255, 255, 255, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+background:alpha(@primary,0.3);
+border: 1px solid transparent;
+transition: all 0.3s ease-in-out;
+min-width: 30px;
+border-radius: 8px;
+box-shadow: inset 1px 2px 2px rgba(255, 255, 255, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 #workspaces button:hover {
-    background:alpha(@secondary,0.2);
-    border-radius: 15px;
+background:alpha(@secondary,0.2);
+border-radius: 15px;
 }
 
 /* -----------------------------------------------------
@@ -115,17 +107,16 @@ label.module:hover {
  * ----------------------------------------------------- */
 
 tooltip {
-    background-color: @surface;
+    background-color: alpha(@surface,0.7);
     border-radius: 12px;
-    background: radial-gradient(circle at 50% 250%, @surface, @surface_dim) padding-box,
-        linear-gradient(#FFFFFF,@on_primary) border-box;
-    border: 1px solid transparent;	
+    border: 1px solid transparent;
     opacity:0.7;
     margin:10px;
+    box-shadow: inset 2px 2px 30px rgba(255, 255, 255, 0.8), inset 0 1px 2px 0px rgba(255, 255, 255, 1), inset 0 1px 1px rgba(255, 255, 255, 1);
 }
 
 tooltip label {
-    color: @on_surface;
+    color: white;
 }
 
 /* -----------------------------------------------------
@@ -144,17 +135,17 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #taskbar {
-    padding: 5px 0px 5px 0px;
+padding: 5px 0px 5px 0px;
 }
 
 #taskbar button {
-    border-radius: 6px;
-    padding:0px 5px 0px 5px;
+border-radius: 6px;
+padding:0px 5px 0px 5px;
 }
 
 #taskbar button:hover {
-    background:@primary;
-    color:@on_primary;    
+background:@primary;
+color:@on_primary;
 }
 
 #taskbar.empty {
@@ -165,13 +156,13 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-ml4w-welcome {
-    margin-top:5px;
-    margin-bottom:5px;
-    background-image: url("../assets/ml4w-icon.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-right: 20px;
+margin-top:5px;
+margin-bottom:5px;
+background-image: url("../assets/ml4w-icon.svg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+padding-right: 20px;
 }
 
 /* -----------------------------------------------------
@@ -189,8 +180,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-appmenu {
-    padding-right:3px;
-    padding-left:5px;
+padding-right:3px;
+padding-left:5px;
 }
 
 #custom-appmenu:hover {
@@ -214,9 +205,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-notification {
-    font-size: 20px;
-    font-family: "Material Icons";
-    color: @icon_color;
+font-size: 20px;
+font-family: "Material Icons";
+color: @icon_color;
 }
 
 /* -----------------------------------------------------
@@ -231,19 +222,19 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates.yellow {
-    border-radius: 8px;
-    margin:5px 0px 5px 5px;
-    padding:0px 6px 0px 6px;
-    background-color: @secondary;
-    color: @on_secondary;
+border-radius: 8px;
+margin:5px 0px 5px 5px;
+padding:0px 6px 0px 6px;
+background-color: @secondary;
+color: @on_secondary;
 }
 
 #custom-updates.red {
-    border-radius: 8px;
-    margin:6px 0px 6px 7px;
-    padding:0px 6px 0px 6px;
-    background-color: @error;
-    color:@on_error;
+border-radius: 8px;
+margin:6px 0px 6px 7px;
+padding:0px 6px 0px 6px;
+background-color: @error;
+color:@on_error;
 }
 
 /* -----------------------------------------------------
@@ -268,8 +259,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-    margin-left: 12px;
-    margin-right: 12px;
+margin-left: 12px;
+margin-right: 12px;
 }
 
 #clock:hover {
@@ -355,13 +346,13 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #tray {
-    padding: 0px 5px 0px 10px;
+padding: 0px 5px 0px 10px;
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+-gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
+-gtk-icon-effect: highlight;
 }
