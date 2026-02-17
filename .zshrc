@@ -74,3 +74,6 @@ fi
 #unset __conda_setup
 # <<< conda initialize <<<
 
+
+# Added by Hugging Face CLI installer
+export PATH="/home/user/.local/bin:$PATH"
