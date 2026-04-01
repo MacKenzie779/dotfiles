@@ -27,13 +27,13 @@
     ],
     // Modules Right    
     "modules-right": [
-        //"custom/updates",
+        "custom/updates",
         "pulseaudio",
         //"backlight",
         "bluetooth",
         "network",
         "battery",
-        //"group/hardware",
+        "group/hardware",
         "group/tools",
         "tray",
         "custom/notification",

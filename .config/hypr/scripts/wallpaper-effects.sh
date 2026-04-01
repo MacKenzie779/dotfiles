@@ -6,6 +6,11 @@
 #    \_/\_/  |_|     |_____|_| |_|  \___|\___|\__|___/
 #
 
+# Notifications
+source "$HOME/.config/ml4w/scripts/ml4w-notification-handler"
+APP_NAME="Waypaper"
+NOTIFICATION_ICON="preferences-desktop-wallpaper-symbolic"
+
 ml4w_cache_folder="$HOME/.cache/ml4w/hyprland-dotfiles"
 
 # Get current wallpaper
@@ -19,10 +24,16 @@ else
     options="$(ls ~/.config/hypr/effects/wallpaper/)\noff"
 
     # Open rofi
-    choice=$(echo -e "$options" | rofi -dmenu -replace -config ~/.config/rofi/config-themes.rasi -i -no-show-icons -l 5 -width 30 -p "Hyprshade")
+    choice=$(echo -e "$options" | rofi -dmenu -replace -config ~/.config/rofi/config-themes.rasi -i -no-show-icons -l 5 -width 30)
     if [ ! -z $choice ]; then
         echo "$choice" >~/.config/ml4w/settings/wallpaper-effect.sh
-        notify-send "Changing Wallpaper Effect to " "$choice"
+
+        notify_user \
+            --a "${APP_NAME}" \
+            --i "${NOTIFICATION_ICON}" \
+            --s "Wallpaper" \
+            --m "Changing Wallpaper Effect to " "$choice."
+
         waypaper --wallpaper $(cat $cache_file)
     fi
 fi
