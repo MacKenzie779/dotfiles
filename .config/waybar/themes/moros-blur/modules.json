@@ -150,8 +150,8 @@
 
     // ML4W Welcome App
     "custom/ml4w-welcome": {
-        "on-click": "flatpak run com.ml4w.sidebar",
-        "on-click-right": "flatpak run com.ml4w.welcome",
+        "on-click": "qs ipc call sidebar toggle",
+        "on-click-right": "qs ipc call welcome toggle",
         "format": " ",
         "tooltip-format": "Open ML4W Sidebar App"
       },
@@ -212,7 +212,7 @@
     // Clock
     "clock": {
         "format": "{:%Od.%Om.%Y - %H:%M}",
-        "on-click": "flatpak run com.ml4w.calendar",
+        "on-click": "qs ipc call calendar toggle",
         "tooltip": false
     },
 
