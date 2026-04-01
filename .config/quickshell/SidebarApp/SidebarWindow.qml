@@ -21,12 +21,13 @@ PanelWindow {
     property bool isHyprlandSettingsInstalled: false
 
     anchors {
-        right: true
+        left: true
         top: true
         bottom: true
     }
 
-    margins { 
+    margins {
+        left: 20 
         top: 87
         bottom: 20
     }
