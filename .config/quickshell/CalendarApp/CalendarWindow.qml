@@ -20,7 +20,7 @@ PanelWindow {
 
     // Anchored to the Upper Side
     anchors {
-        left: true
+        right: true
         top: true
     }
 
@@ -76,7 +76,7 @@ PanelWindow {
 
     margins { 
         top: root.currentTopMargin
-        left: 20
+        right: 20
     }
 
     Behavior on currentTopMargin {
