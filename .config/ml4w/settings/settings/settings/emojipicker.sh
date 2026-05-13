@@ -1,1 +1,1 @@
-smile
+flatpak run com.tomjwatson.Emote
