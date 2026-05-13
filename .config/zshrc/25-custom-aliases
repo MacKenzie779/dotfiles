@@ -19,7 +19,7 @@ alias tree='find . -print | sed -e '\''s;[^/]*/;|____;g;s;____|; |;g'\'''
 alias mp3dl_deprecated='youtube-dl -x --audio-format mp3 --metadata-from-title "%(artist)s - %(title)s" -o "%(title)s.%(ext)s"'
 alias mp3dl_single='yt-dlp -x --audio-format mp3 -o "%(title)s.%(ext)s"'
 alias mp3dl_playlist="$HOME/dotfiles/.config/myscripts/mp3dl_playlist.sh"
-alias tumdownload="$HOME/dotfiles/.config/myscripts/tumdownload.sh"
+alias tumdownload="/home/user/.mydotfiles/com.ml4w.dotfiles.stable/.config/myscripts/tumdownload.sh"
 
 #reload zsh conf
 alias reload='source ~/.zshrc'
