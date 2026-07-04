@@ -35,3 +35,7 @@ done
 if [ -f ~/.bashrc_custom ]; then
     source ~/.bashrc_custom
 fi
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/user/.local/bin:$PATH"

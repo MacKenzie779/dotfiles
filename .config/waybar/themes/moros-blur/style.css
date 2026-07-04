@@ -307,6 +307,25 @@ window#waybar.empty #window {
     margin: 5px 5px 5px 5px;
 }
 
+#custom-claude-usage {
+    background-color: @backgroundlight;
+    font-size: 16px;
+    color: @textcolor2;
+    border-radius: 15px;
+    padding: 2px 5px 0px 10px;
+    margin: 5px 5px 5px 5px;
+}
+
+#custom-claude-usage.warning {
+    background-color: #ff9a3c;
+    color: #FFFFFF;
+}
+
+#custom-claude-usage.critical {
+    background-color: #dc2f2f;
+    color: #FFFFFF;
+}
+
 #language {
     margin-right:10px;
 }

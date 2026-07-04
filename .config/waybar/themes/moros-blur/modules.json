@@ -250,7 +250,15 @@
         "format": "  {percentage_used}% ",
         "path": "/home",
         "on-click": "baobab /home"
-    }, 
+    },
+
+    // Claude Code session usage
+    "custom/claude-usage": {
+        "exec": "/home/user/.mydotfiles/com.ml4w.dotfiles.stable/.config/myscripts/claude-usage.sh",
+        "return-type": "json",
+        "interval": 60,
+        "tooltip": true
+    },
 
     "hyprland/language": {
         "format": "/ K {short}"
@@ -280,7 +288,8 @@
             "cpu",
             "memory",
             "disk#root",
-            "disk#home"
+            "disk#home",
+            "custom/claude-usage"
         ]
     },
     
@@ -318,7 +327,7 @@
         "tooltip-format-wifi": "{ipaddr}/{cidr} - {essid} - {signalStrength}% ",
         "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
         "tooltip-format-disconnected": "Disconnected",
-        "max-length": 15,
+        "max-length": 9,
         "on-click": "alacritty -e nmtui",
         "on-click-right": "nm-connection-editor"
     },

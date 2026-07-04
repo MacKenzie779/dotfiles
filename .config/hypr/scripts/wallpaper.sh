@@ -219,7 +219,7 @@ cp "$generatedversions/blur-$blur-$effect-$wallpaperfilename.png" "$blurredwallp
 if [ ! -f $rasifile ]; then
     touch $rasifile
 fi
-echo "* { current-image: url(\"$blurredwallpaper\", height); }" >"$rasifile"
+echo "* { current-image: url(\"$blurredwallpaper\", width); }" >"$rasifile"
 
 # -----------------------------------------------------
 # Created square wallpaper
